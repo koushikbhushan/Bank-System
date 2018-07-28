@@ -1,11 +1,14 @@
 package com.casestudy.bank.model;
 
+import org.springframework.data.annotation.Id;
+
 /**
  * This class contains basic account detail
  * @author Koushik
  *
  */
 public class AccountDetail {
+	@Id
 	private String accountNumber;
 	private String ifsc;
 	
