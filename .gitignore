@@ -1,0 +1,18 @@
+# Compiled source #
+###################
+*.class
+
+
+# Logs and databases #
+######################
+*.log
+
+
+# OS generated files #
+######################
+Thumbs.db
+
+.classpath
+.project
+.settings/
+target/
