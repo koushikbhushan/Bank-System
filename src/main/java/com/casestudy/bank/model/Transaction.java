@@ -2,6 +2,7 @@ package com.casestudy.bank.model;
 
 import java.util.Date;
 
+
 public class Transaction {
 	private Date transactionDate;
 	private double transactionAmount;

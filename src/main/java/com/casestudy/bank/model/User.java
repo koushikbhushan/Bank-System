@@ -1,5 +1,6 @@
 package com.casestudy.bank.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.data.annotation.Id;
@@ -14,11 +15,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class User {
 	@Id
-	private String id;
+	private int userId;
 	private String name;
 	@DBRef
 	private Set<Account> accounts;
 	private Set<Beneficiary> beneficiaries;
+	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getName() {
 		return name;
 	}
@@ -31,6 +39,13 @@ public class User {
 	public void setAccounts(Set<Account> accounts) {
 		this.accounts = accounts;
 	}
+	public void addAccounts(Account account) {
+		if(this.accounts == null) {
+			this.accounts = new HashSet<>();
+		}
+		this.accounts.add(account);
+	}
+	
 	public Set<Beneficiary> getBeneficiaries() {
 		return beneficiaries;
 	}

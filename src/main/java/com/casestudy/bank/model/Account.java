@@ -17,6 +17,9 @@ public class Account extends AccountDetail {
 	@DBRef
 	Set<Transaction> transactions;
 	
+	@DBRef
+	User user;
+	
 	public Set<Transaction> getTransactions() {
 		return transactions;
 	}
@@ -31,6 +34,14 @@ public class Account extends AccountDetail {
 
 	public void setBalance(double balance) {
 		this.balance = balance;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 }

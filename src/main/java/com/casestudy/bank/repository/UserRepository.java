@@ -7,5 +7,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.casestudy.bank.model.User;
 
 public interface UserRepository extends MongoRepository<User, Serializable> {
+	
+	 public User findByUserId(String userId);
 
 }
